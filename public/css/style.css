@@ -1,0 +1,108 @@
+body {
+    background-color: rgb(210, 240, 229);
+}
+
+.no-button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    color: #1b89bc;
+    text-decoration: none;
+    font-size: 100%;
+}
+
+.no-button:hover {
+    color: #065b83;
+    text-decoration: underline;
+}
+
+.containerone {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.headerone {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(56, 27, 8);
+    color: rgb(210, 240, 229);
+    width: 100%;
+}
+
+.headerone h1 {
+    margin: 20px;
+    margin-left: 30px;
+    padding: 15px;
+    background-color: rgb(210, 240, 229);
+    color: rgb(56, 27, 8);
+    border-radius: 5%;
+    box-shadow: 5px 5px rgb(176, 189, 184);
+}
+
+#navone {
+    color: rgb(210, 240, 229);
+}
+
+#navone a {
+    color: rgb(210, 240, 229);
+    text-decoration: none;
+    font-size: 20px;
+    margin: 15px;
+}
+
+.blogcontainer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.homepage {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    background-color: rgb(210, 240, 229);
+    color: rgb(56, 27, 8);
+    border-style: solid;
+    border-color: rgb(56, 27, 8);
+    border-width: 3px;
+}
+
+.homepagehead {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    background-color: rgb(56, 27, 8);
+    color: rgb(176, 189, 184);
+}
+
+.homepagehead h2 {
+    margin: 10px;
+}
+
+.homepagehead a {
+    color: rgb(176, 189, 184);
+    text-decoration: none;
+    margin: 10px;
+}
+
+.homepagehead p {
+    margin: 10px;
+}
+
+.homepagebody p {
+    margin: 15px;
+}
+
+.login {
+    display: flex;
+    flex-direction: row;
+}
+
+.profile {
+    display: flex;
+    flex-direction: row;
+}
