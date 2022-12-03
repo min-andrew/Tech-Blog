@@ -1,6 +1,19 @@
 <div class="blogcontainer">
-    <h2>{{name}}</h2>
     <p>{{{get_emoji}}}</p>
-    <p>{{description}}</p>
-    <p>Created by {{user.name}} on {{format_date date_created}}</p>
+
+    <div class="homepage row mb-4 project">
+        <div class="homepagehead">
+            <h2>
+                {{name}}
+            </h2>
+            <p>
+            </p>
+            <p>Posted by {{user.name}} on {{format_date date_created}}</p>
+        </div>
+        <div class="homepagebody">
+            <p>
+                {{description}}
+            </p>
+        </div>
+    </div>
 </div>

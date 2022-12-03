@@ -33,7 +33,9 @@ body {
     width: 100%;
 }
 
-.headerone h1 {
+.headerone button {
+    font-size: 30px;
+    font-weight: bolder;
     margin: 20px;
     margin-left: 30px;
     padding: 15px;
@@ -41,6 +43,13 @@ body {
     color: rgb(56, 27, 8);
     border-radius: 5%;
     box-shadow: 5px 5px rgb(176, 189, 184);
+    border-style: none;
+}
+
+.headerone button:active {
+    box-shadow: 4px 4px #666;
+    transform: translateY(3px);
+    transform: translateX(3px);
 }
 
 #navone {
@@ -52,6 +61,10 @@ body {
     text-decoration: none;
     font-size: 20px;
     margin: 15px;
+}
+
+#navone a:active {
+    color: rgb(150, 174, 165)
 }
 
 .blogcontainer {
@@ -105,4 +118,104 @@ body {
 .profile {
     display: flex;
     flex-direction: row;
+}
+
+.login-form,
+.signup-form {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    background-color: rgb(210, 240, 229);
+    color: rgb(56, 27, 8);
+    border-style: solid;
+    border-color: rgb(56, 27, 8);
+    border-width: 3px;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.login {
+    display: flex;
+    flex-direction: column;
+}
+
+.email,
+.password {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.login input {
+    border-radius: 5px;
+    border-style: hidden;
+    margin: 5px;
+    padding: 8px;
+}
+
+.login label {
+    margin-left: 5px;
+}
+
+.submitbtn,
+.signupbtn {
+    display: flex;
+    margin: 5px;
+}
+
+.signupbtn button,
+.submitbtn button {
+    display: flex;
+    border-radius: 5px;
+    border-style: hidden;
+    margin: 5px;
+    padding: 8px;
+    background-color: rgb(176, 189, 184);
+    width: 100%;
+    justify-content: center;
+}
+
+.signupbtn button:active,
+.submitbtn button:active {
+    background-color: rgb(131, 141, 137);
+
+}
+
+.login h2 {
+    font-size: 18px;
+    margin: 10px;
+}
+
+.login-head {
+    background-color: rgb(56, 27, 8);
+    color: rgb(210, 240, 229);
+}
+
+.hidderbtn {
+    display: flex;
+    margin: 5px;
+    margin-left: 10px;
+}
+
+.hidderbtn button {
+    border-style: hidden;
+    background-color: rgb(210, 240, 229);
+    color: rgb(102, 110, 107);
+    ;
+}
+
+.hidderbtn button:active {
+    color: rgb(136, 163, 154);
+}
+
+.signcard {
+    display: none;
+    width: 100%;
+}
+
+.logincard {
+    display: flex;
+    width: 100%;
 }
