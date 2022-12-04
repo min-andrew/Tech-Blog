@@ -37,10 +37,32 @@ const delButtonHandler = async (event) => {
     }
 };
 
-document
-    .querySelector('.new-blog-form')
-    .addEventListener('submit', newFormHandler);
+
+const bloglist = document.querySelector('.blog-list');
+const newpost = document.querySelector(".newpostbtn");
+const postcard = document.querySelector(".makepostcard");
+const cancelbtn = document.querySelector(".cancelbtn");
 
 document
-    .querySelector('.blog-list')
-    .addEventListener('click', delButtonHandler);
+    .querySelector('.makepost-form')
+    .addEventListener('submit', newFormHandler);
+
+
+if (bloglist) {
+    document
+        .querySelector('.blog-list')
+        .addEventListener('click', delButtonHandler);
+};
+
+function unhide() {
+    postcard.style.display = "flex";
+    bloglist.style.display = "none";
+};
+
+function hide() {
+    postcard.style.display = "none";
+    bloglist.style.display = "flex";
+}
+
+newpost.addEventListener('click', unhide);
+cancelbtn.addEventListener('click', hide)

@@ -121,7 +121,8 @@ body {
 }
 
 .login-form,
-.signup-form {
+.signup-form,
+.makepost-form {
     display: flex;
     flex-direction: column;
     margin: 20px;
@@ -140,7 +141,10 @@ body {
 }
 
 .email,
-.password {
+.password,
+.namez,
+.post-title,
+.post-body {
     display: flex;
     flex-direction: column;
     margin: 10px;
@@ -148,25 +152,29 @@ body {
     margin-bottom: 5px;
 }
 
-.login input {
+.login input,
+.makepost-form input {
     border-radius: 5px;
     border-style: hidden;
     margin: 5px;
     padding: 8px;
 }
 
-.login label {
+.login label,
+.makepost-form label {
     margin-left: 5px;
 }
 
 .submitbtn,
-.signupbtn {
+.signupbtn,
+.cancelbtn {
     display: flex;
     margin: 5px;
 }
 
 .signupbtn button,
-.submitbtn button {
+.submitbtn button,
+.cancelbtn button {
     display: flex;
     border-radius: 5px;
     border-style: hidden;
@@ -178,17 +186,20 @@ body {
 }
 
 .signupbtn button:active,
-.submitbtn button:active {
+.submitbtn button:active,
+.cancelbtn button:active {
     background-color: rgb(131, 141, 137);
 
 }
 
-.login h2 {
+.login h2,
+.post-head h2 {
     font-size: 18px;
     margin: 10px;
 }
 
-.login-head {
+.login-head,
+.post-head {
     background-color: rgb(56, 27, 8);
     color: rgb(210, 240, 229);
 }
@@ -203,19 +214,90 @@ body {
     border-style: hidden;
     background-color: rgb(210, 240, 229);
     color: rgb(102, 110, 107);
-    ;
 }
 
 .hidderbtn button:active {
     color: rgb(136, 163, 154);
 }
 
-.signcard {
+.signcard,
+.makepostcard {
     display: none;
     width: 100%;
 }
 
-.logincard {
+.logincard,
+.log-list {
     display: flex;
     width: 100%;
+}
+
+.newpostbtn {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    position: fixed;
+    bottom: 10%;
+}
+
+.newpostbtn button {
+    display: flex;
+    background-color: rgb(56, 27, 8);
+    color: rgb(210, 240, 229);
+    border-style: hidden;
+    border-radius: 10px;
+    padding: 15px 25px 15px 25px;
+    font-size: 20px;
+    z-index: 1;
+}
+
+.newpostbtn button:active {
+    background-color: rgb(98, 48, 14);
+}
+
+.makepost-form textarea {
+    border-radius: 5px;
+    border-style: hidden;
+    margin: 5px;
+    padding: 8px;
+}
+
+.blog-list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.log-list {
+    flex-direction: column;
+    width: 100%;
+}
+
+.myblogpost {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(102, 110, 107);
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.myblogcontainer {
+    display: flex;
+    flex-direction: row;
+}
+
+.myblogpost a {
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 20px;
+    padding-right: 300px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 20px;
+    width: 100%;
+}
+
+.myblogpost p {
+    color: whitesmoke;
+    margin: 10px;
 }

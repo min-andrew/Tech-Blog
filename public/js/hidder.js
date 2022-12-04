@@ -3,7 +3,6 @@ const signhider = document.querySelector("#signuphidderbtn");
 const logincard = document.querySelector(".logincard");
 const signcard = document.querySelector(".signcard");
 
-
 function hidder() {
     if (loginhider.value === "login") {
         logincard.style.display = "none";
@@ -14,9 +13,7 @@ function hidder() {
         logincard.style.display = "flex";
         loginhider.setAttribute("value", "login");
     }
-    return
 };
-
 
 loginhider.addEventListener('click', hidder);
 signhider.addEventListener('click', hidder);
