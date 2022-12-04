@@ -1,0 +1,17 @@
+{{#each this}}
+<div class="comments card mx-auto col-sm-10 my-3 py-1 text-center">
+    <section class="comment">
+        <div class="meta">
+            <div id="post-head-commentz">
+                <div id="namerz-commentz">
+                    <a href="/profile/{{post.user.id}}" id="viewProfile">{{user.name}} </a>
+                </div>
+                <div class="text text-commentz">
+                    <p>{{comment.blog.content}}</p>
+                </div>
+                <p id="comment-card-date">{{dateCreated}}</p>
+            </div>
+        </div>
+    </section>
+</div>
+{{/each}}

@@ -70,7 +70,6 @@ body {
 .blogcontainer {
     display: flex;
     flex-direction: column;
-    text-align: center;
 }
 
 .homepage {
@@ -82,6 +81,7 @@ body {
     border-style: solid;
     border-color: rgb(56, 27, 8);
     border-width: 3px;
+    border-radius: 5px;
 }
 
 .homepagehead {
@@ -122,7 +122,8 @@ body {
 
 .login-form,
 .signup-form,
-.makepost-form {
+.makepost-form,
+.makecomment-form {
     display: flex;
     flex-direction: column;
     margin: 20px;
@@ -161,7 +162,8 @@ body {
 }
 
 .login label,
-.makepost-form label {
+.makepost-form label,
+.makecomment-form label {
     margin-left: 5px;
 }
 
@@ -255,7 +257,8 @@ body {
     background-color: rgb(98, 48, 14);
 }
 
-.makepost-form textarea {
+.makepost-form textarea,
+.makecomment-form textarea {
     border-radius: 5px;
     border-style: hidden;
     margin: 5px;
@@ -300,4 +303,9 @@ body {
 .myblogpost p {
     color: whitesmoke;
     margin: 10px;
+}
+
+.makecommentcard {
+    display: flex;
+    width: 100%;
 }

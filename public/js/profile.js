@@ -56,12 +56,16 @@ if (bloglist) {
 
 function unhide() {
     postcard.style.display = "flex";
-    bloglist.style.display = "none";
+    if (bloglist) {
+        bloglist.style.display = "none";
+    };
 };
 
 function hide() {
     postcard.style.display = "none";
-    bloglist.style.display = "flex";
+    if (bloglist) {
+        bloglist.style.display = "flex";
+    };
 }
 
 newpost.addEventListener('click', unhide);

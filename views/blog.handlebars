@@ -15,5 +15,26 @@
                 {{description}}
             </p>
         </div>
+
+    </div>
+    <div>
+        <div class="col-md-6 makecommentcard">
+            <form class="form makecomment-form">
+                <div class="form-group post-body">
+                    <label for="blog-desc">Comment</label>
+                    <textarea class="form-input" id="comment" placeholder="What's your comment?"
+                        name="blog-desc"></textarea>
+                </div>
+                <div class="form-group submitbtn">
+                    <input type="hidden" name="post-id" value="{{id}}">
+                    <button class="btn btn-primary" type="submit">Post Comment</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div id="#comments">
+        {{> comment}}
     </div>
 </div>
+
+<script src="/js/comment.js"></script>
