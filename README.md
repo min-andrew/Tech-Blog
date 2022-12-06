@@ -4,7 +4,7 @@ Created an website that is a tech blog.
 
 ## Description
 
-This is a website that allows a writer to post the blogs that he or she writes.
+This is a website that allows a writer to post the blogs that he or she writes. Within the app, you are able to create your account and navigate through other user posts, add comments, upload posts, edit your posts, and delete your posts.
 
 ## Getting Started
 
@@ -79,6 +79,9 @@ Windows 10 or the latest Mac OS.
 
   - mysql2
   - sequalize
+  - express
+  - handlebars
+  - bcrypt
 
 ## Help
 
