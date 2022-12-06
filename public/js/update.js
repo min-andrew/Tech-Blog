@@ -2,15 +2,16 @@
 async function updateFormHandler(event) {
     event.preventDefault();
 
-    const commentDescription = document.querySelector('#blog-desc').value.trim();
-    const title = document.querySelector('#blog-name"]').value;
+    const blogDescription = document.querySelector('#blog-desc').value.trim();
+    const title = document.querySelector('#blog-name').value;
+    const id = document.querySelector('.postupdatebtn').getAttribute('data-id');
 
-    if (commentBody) {
+    if (blogDescription) {
         const response = await fetch(`/api/blogs/${id}/edit`, {
             method: 'PUT',
             body: JSON.stringify({
                 title,
-                commentDescription
+                blogDescription
             }),
             headers: {
                 'Content-Type': 'application/json'
@@ -18,15 +19,15 @@ async function updateFormHandler(event) {
         });
 
         if (response.ok) {
-            document.location.reload();
+            console.log("ok")
+            document.location.replace('/profile');
         } else {
-            console.log("Error posting comment")
-            alert("please login first!");
+            console.log("Error updating comment");
         }
     }
 }
 
-document.querySelector('.postupdatebtn').addEventListener('submit', updateFormHandler);
+document.querySelector('.postupdatebtn').addEventListener('click', updateFormHandler);
 
 // delete post function 
 const delButtonHandler = async (event) => {
@@ -35,9 +36,11 @@ const delButtonHandler = async (event) => {
 
         const response = await fetch(`/api/blogs/${id}/edit`, {
             method: 'DELETE',
+            body: JSON.stringify({ blog_id: id })
         });
 
         if (response.ok) {
+            console.log("ok")
             document.location.replace('/profile');
         } else {
             alert('Failed to delete project');
@@ -45,9 +48,4 @@ const delButtonHandler = async (event) => {
     }
 };
 
-document.querySelector('.postdeletebtn').addEventListener('submit', delButtonHandler);
-
-// cancel button 
-document.querySelector('.cancelbtn').onclick = function () {
-    location.href = "/profile";
-};
+document.querySelector('.postdeletebtn').addEventListener('click', delButtonHandler);

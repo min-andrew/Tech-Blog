@@ -19,14 +19,15 @@ router.put('/:id/edit', withAuth, async (req, res) => {
     try {
         const blogData = await Blog.update({
             name: req.body.title,
-            description: req.body.blogDescription,
-            where: {
-                id: req.params.id,
-                user_id: req.session.user_id,
-            },
-        });
-        res.status(200).length.json(blogData);
-        res.redirect('/profile');
+            description: req.body.blogDescription
+        },
+            {
+                where: {
+                    id: req.params.id,
+                    user_id: req.session.user_id,
+                },
+            });
+        res.status(200).json(blogData);
     } catch (err) {
         console.log(err);
         res.status(500).json(err);
@@ -38,7 +39,6 @@ router.delete('/:id/edit', withAuth, async (req, res) => {
         const blogData = await Blog.destroy({
             where: {
                 id: req.params.id,
-                user_id: req.session.user_id,
             },
         });
 
@@ -48,7 +48,6 @@ router.delete('/:id/edit', withAuth, async (req, res) => {
         }
 
         res.status(200).json(blogData);
-        res.redirect('/profile');
     } catch (err) {
         console.log(err);
         res.status(500).json(err);

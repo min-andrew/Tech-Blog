@@ -14,14 +14,14 @@
                 <label for="blog-desc">Content</label>
                 <textarea class="form-input" id="blog-desc" name="blog-desc">{{description}}</textarea>
             </div>
-            <div class="form-group postupdatebtn">
-                <button class="btn btn-primary" type="submit">Update</button>
+            <div class="form-group postupdatebtn" data-id="{{id}}">
+                <button class=" btn btn-primary" type="submit">Update</button>
             </div>
             <div class="form-group postdeletebtn">
-                <button class="btn btn-primary" type="submit">Delete</button>
+                <button class="btn btn-primary" type="submit" data-id="{{id}}">Delete</button>
             </div>
             <div class="form-group cancelbtn">
-                <button class="btn btn-primary" type="submit">Cancel</button>
+                <a class="btn btn-primary" href="/profile">Back</a>
             </div>
         </form>
     </div>

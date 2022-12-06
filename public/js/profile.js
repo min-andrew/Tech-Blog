@@ -31,14 +31,9 @@ document
     .addEventListener('submit', newFormHandler);
 
 
-if (bloglist) {
-    document
-        .querySelector('.blog-list')
-        .addEventListener('click', delButtonHandler);
-};
-
 function unhide() {
     postcard.style.display = "flex";
+    console.log("create posts unhidden")
     if (bloglist) {
         bloglist.style.display = "none";
     };

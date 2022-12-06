@@ -180,7 +180,8 @@ body {
 .submitbtn button,
 .cancelbtn button,
 .postdeletebtn button,
-.postupdatebtn button {
+.postupdatebtn button,
+.cancelbtn a {
     display: flex;
     border-radius: 5px;
     border-style: hidden;
@@ -189,13 +190,16 @@ body {
     background-color: rgb(176, 189, 184);
     width: 100%;
     justify-content: center;
+    text-decoration: none;
+    color: rgb(56, 27, 8);
 }
 
 .signupbtn button:active,
 .submitbtn button:active,
 .cancelbtn button:active,
 .postupdatebtn button:active,
-.postdeletebtn button:active {
+.postdeletebtn button:active,
+.cancelbtn a:active {
     background-color: rgb(131, 141, 137);
 
 }
