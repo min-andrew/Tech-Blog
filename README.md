@@ -44,8 +44,32 @@ THEN I am signed out of the site
 WHEN I am idle on the site for more than a set time
 THEN I am able to view comments but I am prompted to log in again before I can add, update, or delete comments
 
-### Demonstration 
+### Webpage 
 
+https://calm-depths-51350.herokuapp.com/
+
+### Screenshot 
+
+## Homepage
+<img width="1512" alt="Screen Shot 2022-12-06 at 1 04 45 AM" src="https://user-images.githubusercontent.com/58195643/205868570-33f5bc9e-792a-4d99-b4cb-9f34dc1dd21f.png">
+
+## Login
+<img width="1512" alt="Screen Shot 2022-12-06 at 1 04 56 AM" src="https://user-images.githubusercontent.com/58195643/205868543-02c7240e-acce-4f52-a0c1-7ea90f3c787b.png">
+
+## Sign Up
+<img width="1512" alt="Screen Shot 2022-12-06 at 1 06 47 AM" src="https://user-images.githubusercontent.com/58195643/205868706-8748342a-d92e-4189-9039-2a5cb3c2558c.png">
+
+## Dashboard
+<img width="1512" alt="Screen Shot 2022-12-06 at 1 06 59 AM" src="https://user-images.githubusercontent.com/58195643/205868680-ad8d7724-9338-4b36-9b0f-713331b5ad49.png">
+
+## Edit Post
+<img width="1512" alt="Screen Shot 2022-12-06 at 1 07 19 AM" src="https://user-images.githubusercontent.com/58195643/205868744-ba13b20b-cb7f-4c24-8653-70a358f9d7d9.png">
+
+## Create Post
+<img width="1512" alt="Screen Shot 2022-12-06 at 1 07 08 AM" src="https://user-images.githubusercontent.com/58195643/205868772-f18e1388-3c19-47e0-ba7e-5e4c2ec55067.png">
+
+## Post
+<img width="1512" alt="Screen Shot 2022-12-06 at 1 07 30 AM" src="https://user-images.githubusercontent.com/58195643/205868828-c28c0a6a-1b7a-4af7-943a-b5592bb00d08.png">
 
 ### Dependencies
 
