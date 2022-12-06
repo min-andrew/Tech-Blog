@@ -33,21 +33,26 @@
         {{#each blogs as |blog|}}
         <div class="row mb-2 myblogpost">
             <div class="col-md-8 myblogcontainer">
-                <a href="/blog/{{blog.id}}">{{blog.name}}</a>
+                <div class="myblogcontainer2">
+                    <a href="/blog/{{blog.id}}">{{blog.name}}</a>
+                    <a id="editbtn" href="/blog/{{blog.id}}/edit">(Edit)</a>
+                </div>
+                {{!-- <div class="col-md-4">
+                    <button class="btn btn-sm btn-danger" data-id="{{blog.id}}">DELETE</button>
+                </div> --}}
+
                 <p>{{format_date date_created}}</p>
+
+
             </div>
-            {{!-- <div class="col-md-4">
-                <button class="btn btn-sm btn-danger" data-id="{{blog.id}}">DELETE</button>
-            </div> --}}
+            {{/each}}
         </div>
-        {{/each}}
+        {{/if}}
+
+        <div class=" form-group newpostbtn">
+            <button class="btn btn-primary">+ New Post</button>
+        </div>
+
     </div>
-    {{/if}}
 
-    <div class=" form-group newpostbtn">
-        <button class="btn btn-primary">+ New Post</button>
-    </div>
-
-</div>
-
-<script src="./js/profile.js"></script>
+    <script src="./js/profile.js"></script>

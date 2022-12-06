@@ -12,11 +12,12 @@
         </div>
         <div class="homepagebody">
             <p>
-                {{description}} {{blog.content}}
+                {{description}} {{content}}
             </p>
         </div>
 
     </div>
+    {{#if logged_in}}
     <div>
         <div class="col-md-6 makecommentcard">
             <form class="form makecomment-form">
@@ -32,9 +33,10 @@
             </form>
         </div>
     </div>
-    <div id="#comments">
-        {{> comment}}
-    </div>
+    {{> comments }}
+    {{/if}}
+
 </div>
+
 
 <script src="/js/comment.js"></script>

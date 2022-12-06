@@ -6,14 +6,20 @@ router.get('/', async (req, res) => {
     try {
         // Get all blogs and JOIN with user data
         const blogData = await Blog.findAll({
+            attributes: ["id", "name", "description", "date_created"],
             include: [
                 {
-                    model: User,
-                    attributes: ['name'],
+                    model: Comment,
+                    attributes: ["id", "content", "blog_id", "user_id", "date_created"],
+                    include: {
+                        model: User,
+                        attributes: ["name", "id"],
+                    },
                 },
                 {
-                    model: Comment
-                },
+                    model: User,
+                    attributes: ["name", "id"],
+                }
             ],
         });
 
@@ -26,6 +32,7 @@ router.get('/', async (req, res) => {
             logged_in: req.session.logged_in
         });
     } catch (err) {
+        console.log(err);
         res.status(500).json(err);
     }
 });
@@ -44,7 +51,6 @@ router.get('/blog/:id', async (req, res) => {
                     include: {
                         model: User,
                         attributes: ["name", "id"],
-
                     },
                 },
                 {
@@ -55,8 +61,42 @@ router.get('/blog/:id', async (req, res) => {
         })
 
         const blog = blogData.get({ plain: true });
-
+        console.log(blog)
         res.render('blog', {
+            ...blog,
+            logged_in: req.session.logged_in
+        });
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
+
+router.get('/blog/:id/edit', async (req, res) => {
+    try {
+        const blogData = await Blog.findOne({
+            where: {
+                id: req.params.id,
+            },
+            attributes: ["id", "name", "description", "date_created"],
+            include: [
+                {
+                    model: Comment,
+                    attributes: ["id", "content", "blog_id", "user_id", "date_created"],
+                    include: {
+                        model: User,
+                        attributes: ["name", "id"],
+                    },
+                },
+                {
+                    model: User,
+                    attributes: ["name", "id"],
+                },
+            ],
+        })
+
+        const blog = blogData.get({ plain: true });
+        console.log(blog)
+        res.render('edit', {
             ...blog,
             logged_in: req.session.logged_in
         });
