@@ -1,3 +1,4 @@
+// connects handlebar post comment button with route 
 async function commentFormHandler(event) {
     event.preventDefault();
 

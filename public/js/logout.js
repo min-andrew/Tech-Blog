@@ -1,3 +1,4 @@
+// logout function to connect handlebar logout button and route 
 const logout = async () => {
     const response = await fetch('/api/users/logout', {
         method: 'POST',

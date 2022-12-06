@@ -1,3 +1,4 @@
+// New post function to connect handlebar new post button and route 
 const newFormHandler = async (event) => {
     event.preventDefault();
 
@@ -31,6 +32,7 @@ document
     .addEventListener('submit', newFormHandler);
 
 
+// Simple hider/unhider functions that reveal the the new posts if youre not creating a post, or hides the create post and just reveals the posts you've already written. 
 function unhide() {
     postcard.style.display = "flex";
     console.log("create posts unhidden")

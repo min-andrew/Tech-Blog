@@ -3,6 +3,7 @@ const signhider = document.querySelector("#signuphidderbtn");
 const logincard = document.querySelector(".logincard");
 const signcard = document.querySelector(".signcard");
 
+// hide function to switch between sign up and login cards 
 function hidder() {
     if (loginhider.value === "login") {
         logincard.style.display = "none";

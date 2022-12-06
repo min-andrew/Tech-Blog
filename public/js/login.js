@@ -1,3 +1,4 @@
+// Login function to connect handlebar login button and route 
 const loginFormHandler = async (event) => {
     event.preventDefault();
 
@@ -22,6 +23,7 @@ const loginFormHandler = async (event) => {
     }
 };
 
+// signup function to connect handlebar signup button and route 
 const signupFormHandler = async (event) => {
     event.preventDefault();
 

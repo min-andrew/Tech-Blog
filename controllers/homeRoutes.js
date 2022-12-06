@@ -2,6 +2,7 @@ const router = require('express').Router();
 const { Blog, User, Comment } = require('../models');
 const withAuth = require('../utils/auth');
 
+// route to show all the blogs on homepage 
 router.get('/', async (req, res) => {
     try {
         // Get all blogs and JOIN with user data
@@ -37,6 +38,7 @@ router.get('/', async (req, res) => {
     }
 });
 
+// route to show individuals blog posts 
 router.get('/blog/:id', async (req, res) => {
     try {
         const blogData = await Blog.findOne({
@@ -71,6 +73,7 @@ router.get('/blog/:id', async (req, res) => {
     }
 });
 
+// route to show the edits for specific blog posts 
 router.get('/blog/:id/edit', async (req, res) => {
     try {
         const blogData = await Blog.findOne({
@@ -125,6 +128,7 @@ router.get('/profile', withAuth, async (req, res) => {
     }
 });
 
+// logs user in 
 router.get('/login', (req, res) => {
     // If the user is already logged in, redirect the request to another route
     if (req.session.logged_in) {
