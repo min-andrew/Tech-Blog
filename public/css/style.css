@@ -358,3 +358,15 @@ body {
 .makeeditcard {
     display: flex;
 }
+
+footer {
+    position: fixed;
+    display: flex;
+    bottom: 0%;
+    background-color: rgb(56, 27, 8);
+    color: rgb(210, 240, 229);
+    width: 100%;
+    justify-content: center;
+    left: 0%;
+    height: 38px;
+}
